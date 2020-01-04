@@ -1,6 +1,6 @@
 {% set name = "livvkit" %}
-{% set version = "2.1.6" %}
-{% set sha256 = "f6eba931d8cf9942512dcaa91f2d404c121faaafc3e1377f2c45ad19655fea88" %}
+{% set version = "3.0.0" %}
+{% set sha256 = "fb5b105c8322b62256db705df550eb23d6c9b11aad1ce1cd5a76ccc34da92031" %}
 
 package:
   name: {{ name|lower }}
@@ -13,24 +13,25 @@ source:
 build:
   noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
   - livv = livvkit.__main__:main
 
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
     - setuptools
   run:
-    - python
-    - six
+    - python >=3.6
     - numpy
     - scipy
-    - cython
     - netCDF4
     - matplotlib
+    - jinja2
     - json_tricks ==3.11.0
+    - pybtex
+    - pandas
 
 test:
   imports:
