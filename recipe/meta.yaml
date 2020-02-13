@@ -12,7 +12,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
   - livv = livvkit.__main__:main
@@ -27,7 +27,7 @@ requirements:
     - numpy
     - scipy
     - netCDF4
-    - matplotlib
+    - matplotlib-base
     - jinja2
     - json_tricks ==3.11.0
     - pybtex
