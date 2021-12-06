@@ -1,21 +1,21 @@
 {% set name = "livvkit" %}
-{% set version = "3.0.0" %}
-{% set sha256 = "fb5b105c8322b62256db705df550eb23d6c9b11aad1ce1cd5a76ccc34da92031" %}
+{% set version = "3.0.1" %}
+{% set sha256 = "c2221e80a1718004a8cecc76ec2b416f10f3a25bac6305373acfd2584d940d1e" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url:  https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }} 
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
-  - livv = livvkit.__main__:main
+    - livv = livvkit.__main__:main
 
 requirements:
   host:
@@ -44,12 +44,12 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'The land ice verification and validation toolkit'
+  summary: The land ice verification and validation toolkit
 
   description: |
-   LIVVkit is a python-based toolkit for verification and validation of ice sheet models.
-   It aims to provide both model V&V (numerical verification, physical validation) and 
-   software V&V (code verification and performance validation).
+    LIVVkit is a python-based toolkit for verification and validation of ice sheet models.
+    It aims to provide both model V&V (numerical verification, physical validation) and 
+    software V&V (code verification and performance validation).
   doc_url: https://livvkit.github.io/Docs
   dev_url: https://github.com/LIVVkit/LIVVkit
 
