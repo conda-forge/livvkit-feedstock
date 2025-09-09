@@ -1,6 +1,6 @@
 {% set name = "livvkit" %}
-{% set version = "3.1.0" %}
-{% set sha256 = "98142516eb8dbf609fabb6584fff9f5c3ef18a29d3178cbdcfe2a8cdac04fc0d" %}
+{% set version = "3.2.0" %}
+{% set sha256 = "e7ed73b5f812748d268d36cf7940b10175d27ff737e5d2aaf3b9eb5c6ae73fb7" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - livv = livvkit.__main__:main
