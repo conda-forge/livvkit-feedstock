@@ -12,7 +12,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - livv = livvkit.__main__:main
@@ -21,7 +21,9 @@ requirements:
   host:
     - pip
     - python {{ python_min }}
-    - setuptools
+    - setuptools >=64
+    - setuptools_scm >=6.2
+    - python-build
   run:
     - python >={{ python_min }}
     - numpy
@@ -31,7 +33,9 @@ requirements:
     - jinja2
     - json_tricks ==3.11.0
     - pybtex
-    - pandas
+    - pandas >=2.1.0
+    - nodejs
+    - ruamel.yaml
 
 test:
   requires:
