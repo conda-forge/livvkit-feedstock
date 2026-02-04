@@ -27,13 +27,13 @@ requirements:
   run:
     - python >={{ python_min }}
     - jinja2
-    - json_tricks>=3.11.0
+    - json_tricks >=3.11.0
     - loguru
-    - matplotlib
+    - matplotlib-base
     - netcdf4
     - nodejs
     - numpy
-    - pandas>=2.1.0
+    - pandas >=2.1.0
     - pybtex
     - ruamel.yaml
     - scipy
