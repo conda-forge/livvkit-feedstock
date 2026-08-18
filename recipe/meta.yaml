@@ -1,13 +1,13 @@
 {% set name = "livvkit" %}
-{% set version = "3.3.1" %}
-{% set sha256 = "2aa07b0f1a5efed89d76976303fd784f7068471311c7ba49f49fe1a628e57f35" %}
+{% set version = "3.4.0" %}
+{% set sha256 = "ff4693a7a943f67ee5666c525379e603eca79469260a292d3601f3877ae04141" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
