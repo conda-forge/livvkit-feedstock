@@ -1,6 +1,6 @@
 {% set name = "livvkit" %}
-{% set version = "3.4.0" %}
-{% set sha256 = "ff4693a7a943f67ee5666c525379e603eca79469260a292d3601f3877ae04141" %}
+{% set version = "3.4.1" %}
+{% set sha256 = "93f61c6169c0f64239435616981321558648d70d001fb3b4656c7b4582e06b61" %}
 
 package:
   name: {{ name|lower }}
